@@ -9,6 +9,13 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
+  "keywords": [
+    "Angular",
+    "TypeScript",
+    "Jasmine",
+    "Karma"
+  ],
+  "author": "Paul Clark",
   "private": true,
   "dependencies": {
     "@angular/animations": "^6.1.0",
