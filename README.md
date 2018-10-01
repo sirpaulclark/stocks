@@ -16,7 +16,7 @@ This will help the trader to find premium rich underlyings,
 ## Watchlist
 
 The `Trash-can` button will remove all the underlyings from the watchlist
-Each underlying has a `-` (minus) button that will remove that underlyings from the watchlist
+Each underlying has a `-` (minus) button that will remove that underlyings from the watchlist.
 
 
 ## Stocks View
