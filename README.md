@@ -5,7 +5,7 @@ This will help the trader to find premium rich underlyings,
 [Yahoo Finance](http://finance.yahoo.com) is used to retrive the option data.
 
 
-## HowTo
+## How-To
 
 1. When viewing the application, click on the `Stocks` button to goto the `Stocks` view
 2. Once the `Stocks` view is present you can click on the `+` (plus) button to add underlyings to the watchlist.
