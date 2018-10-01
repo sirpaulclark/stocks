@@ -36,5 +36,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## TODO
 
-Add a configuration manager for 'default', 'development', and 'production'
-Add e2e tests
+* Add a configuration manager for 'default', 'development', and 'production'
+* Add e2e tests
