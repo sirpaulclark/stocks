@@ -1,7 +1,7 @@
 # Stock Put Option Analyzer
 
 This client server application will analize stock put options for underlyings in the watchlist
-This will help the trader to find premium rich underlyings 
+This will help the trader to find premium rich underlyings, 
 [Yahoo Finance](http://finance.yahoo.com) is used to retrive the option data.
 
 
