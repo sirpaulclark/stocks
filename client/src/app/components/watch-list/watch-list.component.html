@@ -1,0 +1,10 @@
+<nav class="navbar">
+  <h5>Watchlist</h5>
+  <button type="button" class="btn btn-secondary mr-2" (click)="onClickTrash($event)" [disabled]="disableTrashBtn"
+    placement="bottom" ngbTooltip="Remove all stocks from watchlist">
+    <img src="../../../assets/trashcan.png" width="20"/>
+  </button>
+</nav>
+<div class="container watch-list">
+  <app-watch-list-item *ngFor="let stk of stocks" [stock]="stk"></app-watch-list-item>
+</div>

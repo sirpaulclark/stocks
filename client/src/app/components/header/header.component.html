@@ -1,0 +1,9 @@
+<nav class="navbar navbar-dark bg-dark">
+  <div class="navbar-brand">{{title}}</div>
+  <div class="header-buttons" >
+    <button class="btn btn-primary button-padding" (click)="clickReport()" [disabled]="!stockService.getShowStockList()"
+      placement="bottom" ngbTooltip="Show 'Report' view">Report</button>
+    <button class="btn btn-primary" (click)="clickStocks()" [disabled]="stockService.getShowStockList()"
+      placement="bottom" ngbTooltip="Show 'Stock' view">Stocks</button>
+  </div>
+</nav>

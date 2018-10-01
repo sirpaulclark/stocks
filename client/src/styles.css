@@ -1,0 +1,10 @@
+.button-padding {
+    margin-right: 4px;
+}
+
+.truncate {
+    width: 225px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

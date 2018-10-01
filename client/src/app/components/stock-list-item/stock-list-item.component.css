@@ -1,0 +1,35 @@
+.stock-list-item {
+    margin: 2px;
+    padding: 4px;
+    border: 2px; 
+    border-style: solid;
+    border-radius: 25px;
+    width: 250px;
+}
+
+.price > span {
+    margin-right: 5px;
+}
+
+.line {
+    display: flex;
+    justify-content: space-around;
+}
+
+.top {
+    font-weight: bold;
+    font-size: 16pt;
+    border-radius: 25px;
+}
+
+.neg {
+    background-color: #e04d4d;
+}
+
+.pos {
+    background-color: #3fd112;
+}
+
+.name {
+    text-align: center;
+}

@@ -1,0 +1,27 @@
+<nav class="navbar navbar-light bg-light">
+  <h5>Stocks with Weekly Options [{{stockData.length}}]</h5>
+  <div>
+    <button type="button" class="btn btn-secondary button-padding" (click)="sort('alpha')" 
+      [disabled]="disableBtn"
+      placement="bottom" ngbTooltip="Sort by stock symbol">
+      <img src="../../../assets/sort-alphabet-512.png" width="18"/>
+    </button>
+    <button type="button" class="btn btn-secondary button-padding" (click)="sort('num')" 
+      [disabled]="disableBtn"
+      placement="bottom" ngbTooltip="Sort by stock price">
+      <img src="../../../assets/sort-numbers-512.png" width="18"/>
+    </button>
+    <button type="button" class="btn btn-secondary" (click)="refresh()" 
+      [disabled]="disableBtn"
+      placement="bottom" ngbTooltip="Refresh the current price of all stocks">
+      <img src="../../../assets/refresh.png" width="18"/>
+    </button>
+  </div>
+</nav>
+<div class="container stock-list">
+  <app-stock-list-item *ngFor="let stk of stockData" [stock]="stk"></app-stock-list-item>
+  <div class="center">
+    <img src="../../../assets/loader.gif" width="60" [hidden]="!disableBtn">
+  </div>
+</div>
+

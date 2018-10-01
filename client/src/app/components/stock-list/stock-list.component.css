@@ -1,0 +1,15 @@
+.stock-list {
+    display: flex;
+    flex-wrap: wrap;
+    /* vh - appheader - appfooter - stocknavbar */
+    height: calc(100vh - 56px - 50px - 54px); 
+    overflow-y: auto;
+    padding: 2px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}

@@ -1,0 +1,11 @@
+<app-header [title]="title"></app-header>
+<div class="wrapper">
+    <div class="sidebar">
+        <app-watch-list></app-watch-list>
+    </div>
+    <div class="content">
+        <app-stock-report *ngIf="!stockService.getShowStockList()"></app-stock-report>
+        <app-stock-list  *ngIf="stockService.getShowStockList()"></app-stock-list>
+        <app-footer></app-footer>
+    </div>
+</div>

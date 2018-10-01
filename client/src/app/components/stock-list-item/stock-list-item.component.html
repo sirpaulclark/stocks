@@ -1,0 +1,14 @@
+<div class="container stock-list-item">
+  <div class="line top" [ngClass]="{'neg': change < 0, 'pos': change >= 0}" >
+    <div class="symbol">{{symbol | uppercase}}</div>
+    <div class='price'>{{price | number:'1.2-2'}}</div>
+    <button class="btn button-primary btn-sm" (click)="onClickAdd($event)"
+      placement="bottom" ngbTooltip="Add stock to watchlist">+</button>
+  </div>
+  <div class="name truncate" >{{name}}</div>
+  <div class="line">
+    <div class='price'><span>C</span>{{change | number:'1.2-2'}}</div>
+    <div class='price'><span>H</span>{{high | number:'1.2-2'}}</div>
+    <div class='price'><span>L</span>{{low | number:'1.2-2'}}</div>
+  </div>
+</div>

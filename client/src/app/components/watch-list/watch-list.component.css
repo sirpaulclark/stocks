@@ -1,0 +1,8 @@
+.watch-list {
+    display: flex;
+    flex-direction: column;
+    /* vh - appheader - navbar */
+    height: calc(100vh - 56px - 54px); 
+    overflow-x: hidden;
+    overflow-y: auto;
+}
