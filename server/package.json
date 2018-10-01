@@ -10,7 +10,10 @@
   "keywords": [
     "REST",
     "STOCKS",
-    "OPTIONS"
+    "OPTIONS",
+    "NodeJS",
+    "TypeScript",
+    "Mocha"
   ],
   "author": "Paul Clark",
   "license": "ISC",
