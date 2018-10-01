@@ -40,6 +40,6 @@
     "chai-http": "^4.2.0",
     "mocha": "^5.2.0",
     "ts-node-dev": "^1.0.0-pre.30",
-    "typescript": "^3.0.3"
+    "typescript": "^3.1.1"
   }
 }
