@@ -25,7 +25,7 @@ export class StockListItemComponent implements OnInit {
   ngOnInit() {
     if (this.stock) {
       this.symbol = this.stock.optionChain.result[0].quote.symbol;
-      this.name = this.stock.optionChain.result[0].quote.longName.replace(/&amp;/g, '&');
+      this.name = this.stock.optionChain.result[0].quote.longName;
       this.price = Number(this.stock.optionChain.result[0].quote.regularMarketPrice);
       this.change = Number(this.stock.optionChain.result[0].quote.regularMarketChange);
       this.high = Number(this.stock.optionChain.result[0].quote.regularMarketDayHigh);

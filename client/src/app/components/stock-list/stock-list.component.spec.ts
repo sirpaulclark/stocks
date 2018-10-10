@@ -1,6 +1,8 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { ComponentFixture, TestBed, async, fakeAsync, tick } from '@angular/core/testing';
 import { StockListComponent } from './stock-list.component';
+import { FilterPipe} from '../../pipes';
 
 import { StockService} from '../../services';
 import { getFakeStockService } from '../../testing';
@@ -12,10 +14,11 @@ describe('StockListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ StockListComponent ],
+      declarations: [ StockListComponent, FilterPipe ],
       providers: [
         { provide: StockService, useValue: getFakeStockService() }
       ],
+      imports: [FormsModule],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
     })
     .compileComponents();

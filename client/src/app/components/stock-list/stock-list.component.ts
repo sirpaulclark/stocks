@@ -11,6 +11,7 @@ export class StockListComponent implements OnInit {
   private alphaSort = true;
   private numSort = true;
 
+  public filterString: string;
   public disableBtn = true;
   public stockData: YOptionData[] = [];
 
@@ -24,6 +25,7 @@ export class StockListComponent implements OnInit {
   }
 
   public sort(type: string): void {
+    this.filterString = '';
     if ('alpha' === type) {
       this.stockData.sort((a, b) => this.compareAlphaOption(a, b));
       this.alphaSort = !this.alphaSort;
@@ -34,6 +36,7 @@ export class StockListComponent implements OnInit {
   }
 
   public refresh(): void {
+    this.filterString = '';
     this.disableBtn = true;
     this.stockData = [];
     this.getStocks(true);

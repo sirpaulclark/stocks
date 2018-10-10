@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed, fakeAsync, tick } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
 import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
 import { DebugElement } from '@angular/core';
 import { By } from '@angular/platform-browser';
@@ -57,7 +58,8 @@ describe('StockReportComponent', () => {
         { provide: StockService, useValue: getFakeStockService() }
       ],
       imports: [
-        NgbTooltipModule
+        NgbTooltipModule,
+        FormsModule
       ]
     })
     .compileComponents();

@@ -1,7 +1,7 @@
 import { Injectable, EventEmitter } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
-import { catchError } from 'rxjs/operators';
+import { catchError, map } from 'rxjs/operators';
 
 import { YOptionData, Stock } from '../models';
 
@@ -46,6 +46,13 @@ export class StockService {
     }
     return this.httpClient.get<YOptionData[]>(urlStock, refresh ? {params} : undefined)
     .pipe(
+      map(data => data.map(option => {
+        option.optionChain.result[0].quote.longName =
+          option.optionChain.result[0].quote.longName.replace(/&amp;/g, '&');
+        return option;
+      }))
+    )
+    .pipe(
       catchError(error => {
         return this.handleError<YOptionData[]>(`getStockData`, error, []);
       })
@@ -58,6 +65,13 @@ export class StockService {
       params = new HttpParams().set('full', `${full}`);
     }
     return this.httpClient.get<Stock[]>(urlWatchlist, full ? {params} : undefined)
+    .pipe(
+      map(stocks => stocks.map(stock => {
+        stock.description = stock.description.replace(/,/g, '');
+        stock.description = stock.description.replace(/&amp;/g, '&');
+        return stock;
+      }))
+    )
     .pipe(
       catchError(error => {
         return this.handleError<Stock[]>(`getWatchlist`, error, []);

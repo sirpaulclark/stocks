@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './header.component';
 import { HttpClientModule } from '@angular/common/http';
 import { StockService} from '../../services';
@@ -18,7 +19,8 @@ describe('HeaderComponent', () => {
         StockService
       ],
       imports: [
-        HttpClientModule
+        HttpClientModule,
+        FormsModule
       ]
     })
     .compileComponents();

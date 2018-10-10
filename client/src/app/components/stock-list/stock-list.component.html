@@ -1,6 +1,10 @@
 <nav class="navbar navbar-light bg-light">
   <h5>Stocks with Weekly Options [{{stockData.length}}]</h5>
   <div>
+    <input class="button-padding" type="text" 
+      [(ngModel)]="filterString"
+      placement="bottom"
+      ngbTooltip="Filter by stock symbol and/or stock name">
     <button type="button" class="btn btn-secondary button-padding" (click)="sort('alpha')" 
       [disabled]="disableBtn"
       placement="bottom" ngbTooltip="Sort by stock symbol">
@@ -19,7 +23,8 @@
   </div>
 </nav>
 <div class="container stock-list">
-  <app-stock-list-item *ngFor="let stk of stockData" [stock]="stk"></app-stock-list-item>
+  <app-stock-list-item *ngFor="let stk of stockData | filter : filterString : 'option'" 
+    [stock]="stk"></app-stock-list-item>
   <div class="center">
     <img src="../../../assets/loader.gif" width="60" [hidden]="!disableBtn">
   </div>

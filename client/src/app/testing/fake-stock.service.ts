@@ -41,7 +41,7 @@ const option2: YOptionData = {
           symbol: 'abc',
           quoteType: '',
           shortName: '',
-          longName: 'Company ABC Inc',
+          longName: 'Company ABC LLC',
           bid: 1,
           ask: 1,
           regularMarketPrice: 22.25,

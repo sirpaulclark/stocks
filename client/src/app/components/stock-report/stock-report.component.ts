@@ -21,6 +21,7 @@ export class ReportItem {
   styleUrls: ['./stock-report.component.css']
 })
 export class StockReportComponent implements OnInit {
+  public imgUpDown = '../../../assets/updown-512.png';
   public disableRunBtn = true;
   public reportItems: ReportItem[] = [];
 
@@ -113,8 +114,6 @@ export class StockReportComponent implements OnInit {
             const reportItem = new ReportItem();
             reportItem.symbol = this.stocks[i].symbol;
             reportItem.description = this.stocks[i].description;
-            reportItem.description = reportItem.description.replace(/,/g, '');
-            reportItem.description = reportItem.description.replace(/&amp;/g, '&');
             reportItem.price = this.stocks[i].price;
             reportItem.otmStrike = putOut.strike;
             reportItem.otmMidPrice = limOut;
