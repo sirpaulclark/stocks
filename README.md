@@ -1,6 +1,6 @@
 # Stock Put Option Analyzer
 
-A client/server application using Angular 6 and NodeJS 8 technologies that will analyze stock put options for underlings in the watchlist.  This can help the trader to find premium rich underlings.  [Yahoo Finance](http://finance.yahoo.com) is used to retrieve the option data
+A client/server application using Angular 7 and NodeJS 8 technologies that will analyze stock put options for underlings in the watchlist.  This can help the trader to find premium rich underlings.  [Yahoo Finance](http://finance.yahoo.com) is used to retrieve the option data
 
 ## How-To
 
